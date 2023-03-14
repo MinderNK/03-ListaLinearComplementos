@@ -120,10 +120,21 @@ void inserirElemento()
 
 }
 
-void excluirElemento()
-{
-
-
+void excluirElemento(){
+if (nElementos == 0) { 
+	cout << "Lista vazia";
+} 
+else 
+{ 
+	int del;
+	cout << "Digite o elemento que quer deletar: "; 
+	cin >> del; int pos = posicaoElemento(del); 
+	if (pos != -1) 
+	{ lista[pos] = lista[nElementos - 1]; nElementos--; } 
+	else 
+	{ cout << "O elemento digitado nao foi encontrado" << endl; 
+	} 
+} 
 }
 
 void buscarElemento()
